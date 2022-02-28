@@ -25,3 +25,16 @@ function solution(number){
 }
 
 console.log(solution(15))
+
+function solutionTwo(number){
+    let sum = 0
+
+    for (let i = 1; i < number; i++){
+        if(i % 3 == 0 || i % 5 == 0){    // The logical OR (||) operator (logical disjunction) for a set 
+            sum +=i                      // of operands is true if and only if one or more of its operands is true.
+        }
+    }
+    return sum;
+}
+
+console.log(solution(10))
