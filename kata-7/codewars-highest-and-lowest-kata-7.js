@@ -23,3 +23,10 @@ function highAndLow(numbers){
 
 console.log(highAndLow("1 2 -3 4 5"))
 
+
+function highAndLowTwo(numbers){
+    numbers = numbers.split(' ').map(Number); //converts to an array of numbers automatically,
+    return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
+
+console.log(highAndLowTwo("1 -8 -3 7 5"))
