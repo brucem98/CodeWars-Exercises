@@ -37,3 +37,24 @@ function openOrSenior(data){
 console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
 
 
+// SOLUTION WITH SOME *Higher Order Functions*
+
+
+function openOrSeniorTwo(data){
+    // an array to store the categories 
+    return data.map((member) => {
+        const age = member[0];
+        const handicap = member[1];
+        // check if the current item index 0 is greater than or equal to 55
+        if (age >= 55 && handicap > 7) {
+          return 'Senior';
+        } else {
+          return 'Open';
+        }
+    });
+    }
+
+    console.log(openOrSeniorTwo([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+
+
+
