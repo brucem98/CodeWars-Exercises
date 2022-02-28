@@ -1,4 +1,5 @@
 console.log("hello")
+const str = "hello"
 
 function getCount (str) {
     let vowelsCount = 0;
@@ -8,14 +9,14 @@ function getCount (str) {
 
     // Compares each index of the string away to each vowel to see if it matches on of those
 
-    strArr.foreach((el) => {
+    strArr.forEach((el) => {
         for (let i = 0; i < vowels.length - 1; i++){
             if(el === vowels[i]){
-                vowels
+                vowelsCount++; 
             }
         }
-    
-    })
-
+    });
     return vowelsCount;
 }
+
+console.log(getCount("hello"))
