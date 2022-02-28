@@ -29,3 +29,15 @@ function unluckyDays(year){
 };
 
 console.log(unluckyDays(2009))
+
+function unluckyDaysTwo(year){
+    let unlucky = 0;
+    for (let i = 0; i < 12; i++) {
+        if(new Date(year, i, 13).getDay() === 5){
+            unlucky++;
+        }
+    }
+    return unlucky;
+}
+
+console.log(unluckyDaysTwo(2021))
