@@ -30,3 +30,11 @@ function highAndLowTwo(numbers){
 }
 
 console.log(highAndLowTwo("1 -8 -3 7 5"))
+
+function highAndLowThree(numbers){
+    numbers = numbers.split(' ');
+    console.log("numbers post split", numbers)
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+
+console.log(highAndLowThree("1 3 -4 9 8"))
