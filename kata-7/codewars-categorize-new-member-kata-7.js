@@ -57,4 +57,20 @@ function openOrSeniorTwo(data){
     console.log(openOrSeniorTwo([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
 
 
+// SOLUTION WITH SOME *Array Deconstructuring* 
+    function openOrSeniorThree(data){
+        // an array to store the categories 
+        return data.map(([age, handicap]) => {
+            // check if the current item index 0 is greater than or equal to 55
+            if (age >= 55 && handicap > 7) {
+              return 'Senior';
+            } else {
+              return 'Open';
+            }
+        });
+    }
+
+    console.log(openOrSeniorThree([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+    
+ // deconstructuring can take the parameters of a function and break them up (you can also do with objects and arrays)
 
