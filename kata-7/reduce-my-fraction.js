@@ -4,7 +4,7 @@
 
 function reduce(fraction) {
   function gcd(a, b) {
-    return b === 0 ? a : gcd(b, a % b); // recursion, checks if b is 0 first, if it is returs a
+    return b === 0 ? a : gcd(b, a % b); // recursion, checks if b is 0 first, if it is returns a
   }
 
   const [numerator, denominator] = fraction;
