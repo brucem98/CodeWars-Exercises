@@ -4,11 +4,21 @@ function sumArray(array) {
   } else if (array.length < 2) {
     return 0;
   } else {
-    const filterArray = array.filter(
-      (num) => num !== Math.min(...array) && num !== Math.max(...array)
-    );
+    const min = Math.min(...array);
+    const max = Math.max(...array);
 
-    return filterArray.reduce((a, b) => a + b, 0);
+    const minIndex = array.indexOf(min);
+    const maxIndex = array.indexOf(max);
+
+    if (minIndex !== -1) {
+      array.splice(minIndex, 1);
+    }
+
+    if (maxIndex !== -1) {
+      array.splice(maxIndex, 1);
+    }
+
+    return array.reduce((a, b) => a + b, 0);
   }
 }
 
