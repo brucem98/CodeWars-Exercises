@@ -1,0 +1,13 @@
+const operations = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => (b !== 0 ? a / b : "Cannot divide by zero"),
+};
+
+function arithmetic(a, b, operator) {
+    const operation = operations[operator];
+    return operation ? operation(a, b) : "Invalid operator";
+}
+
+console.log(arithmetic(5,2,'add'), arithmetic(5,2,'subtract'),arithmetic(5,2,'multiply'), arithmetic(5,2,'divide'));
